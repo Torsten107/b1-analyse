@@ -141,7 +141,7 @@ textarea:focus{border-color:var(--prim)}
   <div class="page-header">
     <div class="eyebrow">Qualitätskontrolle · GER B1-Standard</div>
     <h1>Sprachlevel-Analyse</h1>
-    <p class="sub">GER-Score regelbasiert · Qualitätsübersicht optional mit KI</p>
+    <p class="sub">Prüft Texte auf B1-Niveau · GER-Score und Styleguide regelbasiert</p>
   </div>
 
   <div class="card" id="inputSection">
@@ -579,7 +579,7 @@ function renderStyleguide(sg){
   // Sonderzeichen
   let sonderHTML=
     det('Schrägstriche (x/y)',sg.schrägstrichCount===0?'Keine':sg.schrägstrichCount+' Treffer',valClass(sg.schrägstrichCount===0,sg.schrägstrichCount<=1))+
-    det('Lange Klammern',sg.klammernCount===0?'Keine':sg.klammernCount+' Treffer',valClass(sg.klammernCount===0,false))+
+    det('Klammereinschübe (>30 Zeichen)',sg.klammernCount===0?'Keine':sg.klammernCount+' Treffer',valClass(sg.klammernCount===0,false))+
     det('Kaufm. & (statt und)',sg.kaufmCount===0?'Keines':sg.kaufmCount+' Treffer',valClass(sg.kaufmCount===0,false));
   document.getElementById('styleSonder').innerHTML=sonderHTML;
 
